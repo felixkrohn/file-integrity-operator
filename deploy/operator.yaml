@@ -16,7 +16,7 @@ spec:
       serviceAccountName: file-integrity-operator
       containers:
         - name: file-integrity-operator
-          image: "quay.io/file-integrity-operator/file-integrity-operator:latest"
+          image: "image-registry.openshift-image-registry.svc:5000/openshift-file-integrity/file-integrity-operator:latest"
           command:
           - file-integrity-operator
           args:
@@ -34,7 +34,7 @@ spec:
             - name: OPERATOR_NAME
               value: "file-integrity-operator"
             - name: RELATED_IMAGE_OPERATOR
-              value: "quay.io/file-integrity-operator/file-integrity-operator:latest"
+              value: "image-registry.openshift-image-registry.svc:5000/openshift-file-integrity/file-integrity-operator:latest"
       nodeSelector:
         node-role.kubernetes.io/master: ""
       tolerations:

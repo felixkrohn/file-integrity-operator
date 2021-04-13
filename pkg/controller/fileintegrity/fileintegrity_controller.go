@@ -683,6 +683,6 @@ func daemonArgs(dsName string, fi *fileintegrityv1alpha1.FileIntegrity) []string
 		"--interval=" + getGracePeriod(fi),
 		"--debug=" + getDebug(fi),
 		"--aideconfigdir=/config",
-		//"--pprof=true",
+		"--pprof=true",
 	}
 }
